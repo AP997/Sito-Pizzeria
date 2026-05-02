@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Fornace Nera — Pizzeria d'Autore</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="ristorante.css" />
+</head>
+<body>
+
+  <!--  NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-ornament">✦</span>
+        La Fornace Nera
+        <span class="logo-ornament">✦</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#menu" class="nav-link">Menu</a></li>
+        <li><a href="#storia" class="nav-link">Chi Siamo</a></li>
+        <li><a href="#galleria" class="nav-link">Galleria</a></li>
+        <li><a href="#recensioni" class="nav-link">Recensioni</a></li>
+        <li><a href="#contatti" class="nav-link">Contatti</a></li>
+      </ul>
+
+      <button class="nav-reserve" onclick="document.getElementById('contatti').scrollIntoView({behavior:'smooth'})">
+        Prenota un Tavolo
+      </button>
+
+      <!-- Hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!--  HERO  -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img
+        src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=1800&q=85&fit=crop"
+        alt="Pizza gourmet su tavolo di marmo" class="hero-img" />
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow reveal">Napoli · Dal 1987</p>
+      <h1 class="hero-title reveal">
+        La Fornace<br /><em>Nera</em>
+      </h1>
+      <p class="hero-sub reveal">
+        L'arte del fuoco, la perfezione dell'impasto,<br />
+        il lusso del gusto autentico.
+      </p>
+      <div class="hero-ctas reveal">
+        <a href="#menu" class="btn btn-gold">Scopri il Menu</a>
+        <a href="#storia" class="btn btn-ghost">La Nostra Storia</a>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint">
+      <span>Scorri</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- MENU  -->
+  <section class="section menu-section" id="menu">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-label">Il Nostro Menu</span>
+        <h2 class="section-title">Pizze d'Autore</h2>
+        <p class="section-sub">Ogni pizza è un'opera creata con farina tipo 1 biologica, maturazione 72 ore e cottura in forno a legna a 485°C.</p>
+      </div>
+
+      <!-- Category tabs -->
+      <div class="menu-tabs reveal">
+        <button class="tab active" data-cat="rosse">Rosse</button>
+        <button class="tab" data-cat="bianche">Bianche</button>
+        <button class="tab" data-cat="speciali">Speciali</button>
+      </div>
+
+      <!-- ROSSE -->
+      <div class="menu-grid" data-cat="rosse">
+
+        <div class="menu-card reveal">
+          <div class="menu-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=600&q=80&fit=crop" alt="Margherita del Re" />
+            <div class="menu-card-badge">Signature</div>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-top">
+              <h3>Margherita del Re</h3>
+              <span class="price">€18</span>
+            </div>
+            <p>Pomodoro San Marzano DOP, fior di latte di Agerola, basilico fresco, olio EVO Ravece</p>
+            <ul class="tags"><li>DOP</li><li>Vegetariana</li></ul>
+          </div>
+        </div>
+
+        <div class="menu-card reveal">
+          <div class="menu-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?w=600&q=80&fit=crop" alt="Diavola Imperiale" />
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-top">
+              <h3>Diavola Imperiale</h3>
+              <span class="price">€22</span>
+            </div>
+            <p>Salame piccante calabrese, pomodoro Corbarino, provola affumicata, peperoncino di Cayenna</p>
+            <ul class="tags"><li>Piccante</li><li>Best Seller</li></ul>
+          </div>
+        </div>
+
+        <div class="menu-card reveal">
+          <div class="menu-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80&fit=crop" alt="Marinara Antica" />
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-top">
+              <h3>Marinara Antica</h3>
+              <span class="price">€16</span>
+            </div>
+            <p>Pomodoro San Marzano, aglio di Nubia, origano selvatico di montagna, olio EVO monocultivar</p>
+            <ul class="tags"><li>Vegana</li><li>Tradizionale</li></ul>
+          </div>
+        </div>
+
+        <div class="menu-card reveal">
+          <div class="menu-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1528137871618-79d2761e3fd5?w=600&q=80&fit=crop" alt="Tartufata Nera" />
+            <div class="menu-card-badge">Chef</div>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-top">
+              <h3>Tartufata Nera</h3>
+              <span class="price">€34</span>
+            </div>
+            <p>Crema di tartufo nero, fior di latte, prosciutto crudo 24 mesi, scaglie di grana, tartufo fresco</p>
+            <ul class="tags"><li>Premium</li><li>Stagionale</li></ul>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- BIANCHE -->
+      <div class="menu-grid hidden" data-cat="bianche">
+
+        <div class="menu-card reveal">
+          <div class="menu-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1548369937-47519962c11a?w=600&q=80&fit=crop" alt="Burrata e Speck" />
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-top">
+              <h3>Burrata e Speck</h3>
+              <span class="price">€26</span>
+            </div>
+            <p>Base di olio EVO, burrata pugliese, speck dell'Alto Adige IGP, pere caramellate, noci tostate</p>
+            <ul class="tags"><li>Signature</li></ul>
+          </div>
+        </div>
+
+        <div class="menu-card reveal">
+          <div class="menu-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1555072956-7758afb20e8f?w=600&q=80&fit=crop" alt="Pistacchio e Mortadella" />
+            <div class="menu-card-badge">Trending</div>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-top">
+              <h3>Pistacchio e Mortadella</h3>
+              <span class="price">€24</span>
+            </div>
+            <p>Crema di pistacchio di Bronte DOP, stracciatella, mortadella di Bologna IGP, granella di pistacchio</p>
+            <ul class="tags"><li>DOP</li><li>IGP</li></ul>
+          </div>
+        </div>
+
+        <div class="menu-card reveal">
+          <div class="menu-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?w=600&q=80&fit=crop" alt="Quattro Formaggi Raffinata" />
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-top">
+              <h3>Quattro Formaggi Raffinata</h3>
+              <span class="price">€22</span>
+            </div>
+            <p>Gorgonzola DOP, taleggio, pecorino romano, scamorza affumicata, miele millefiori</p>
+            <ul class="tags"><li>Vegetariana</li></ul>
+          </div>
+        </div>
+
+        <div class="menu-card reveal">
+          <div class="menu-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?w=600&q=80&fit=crop" alt="Carpaccio di Manzo" />
+            <div class="menu-card-badge">Chef</div>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-top">
+              <h3>Carpaccio di Manzo</h3>
+              <span class="price">€32</span>
+            </div>
+            <p>Base bianca, carpaccio di manzo Chianina, rucola selvatica, grana 36 mesi, limone di Sorrento</p>
+            <ul class="tags"><li>Premium</li></ul>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- SPECIALI -->
+      <div class="menu-grid hidden" data-cat="speciali">
+
+        <div class="menu-card reveal">
+          <div class="menu-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1590947132387-155cc02f3212?w=600&q=80&fit=crop" alt="Black Edition" />
+            <div class="menu-card-badge">Esclusiva</div>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-top">
+              <h3>Black Edition</h3>
+              <span class="price">€38</span>
+            </div>
+            <p>Impasto al carbone vegetale, astice blu, burrata, zafferano, bottarga di muggine, limone amalfitano</p>
+            <ul class="tags"><li>Luxury</li><li>Mare</li></ul>
+          </div>
+        </div>
+
+        <div class="menu-card reveal">
+          <div class="menu-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1576458088443-04a19bb13da6?w=600&q=80&fit=crop" alt="Truffle Season" />
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-top">
+              <h3>Truffle Season</h3>
+              <span class="price">€44</span>
+            </div>
+            <p>Fonduta di fontina valdostana, tartufo bianco d'Alba, uovo di quaglia in camicia, erba cipollina</p>
+            <ul class="tags"><li>Stagionale</li><li>Top</li></ul>
+          </div>
+        </div>
+
+        <div class="menu-card reveal">
+          <div class="menu-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1513619048–3d6e5adfe-8a01-abbc32832b7a?w=600&q=80&fit=crop"
+                 onerror="this.src='https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=600&q=80&fit=crop'"
+                 alt="Gold Prosciutto" />
+            <div class="menu-card-badge">Gold</div>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-top">
+              <h3>Gold Prosciutto</h3>
+              <span class="price">€36</span>
+            </div>
+            <p>Crema di parmigiano 24 mesi, prosciutto di Parma DOP 36 mesi, fichi caramellati, riduzione di balsamico tradizionale di Modena</p>
+            <ul class="tags"><li>DOP</li><li>Premium</li></ul>
+          </div>
+        </div>
+
+        <div class="menu-card reveal">
+          <div class="menu-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80&fit=crop" alt="Mare e Monti" />
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-top">
+              <h3>Mare e Monti</h3>
+              <span class="price">€28</span>
+            </div>
+            <p>Gamberi rossi di Sicilia, porcini trifolati, stracciatella, pomodorino del Piennolo, prezzemolo croccante</p>
+            <ul class="tags"><li>Mare</li><li>Bosco</li></ul>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!--  DIVIDER QUOTE -->
+  <div class="quote-divider">
+    <div class="quote-inner reveal">
+      <span class="quote-mark">"</span>
+      <p>La pizza è democrazia. Ma farla bene è aristocrazia.</p>
+      <cite>— Albano Esposito  Fondatore</cite>
+    </div>
+  </div>
+
+  <!--  CHI SIAMO  -->
+  <section class="section storia-section" id="storia">
+    <div class="container storia-grid">
+
+      <div class="storia-images reveal">
+        <div class="storia-img-main">
+          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=85&fit=crop" alt="Interno del ristorante" />
+        </div>
+        <div class="storia-img-secondary">
+          <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500&q=80&fit=crop" alt="Il nostro forno a legna" />
+        </div>
+        <div class="storia-badge">
+          <span class="badge-num">37</span>
+          <span class="badge-txt">anni di<br />eccellenza</span>
+        </div>
+      </div>
+
+      <div class="storia-content reveal">
+        <span class="section-label">La Nostra Storia</span>
+        <h2 class="section-title">Nati dal fuoco,<br /><em>cresciuti con passione</em></h2>
+        <p>Nel 1987 Albano Esposito accese per la prima volta il forno a legna di tufo nel cuore del Rione Sanità a Napoli. Non aveva grandi mezzi, ma aveva il segreto di suo nonno: un impasto a lunga maturazione e la cura assoluta per ogni ingrediente.</p>
+        <p>Oggi, trentasette anni dopo, La Fornace Nera è diventata un punto di riferimento per chi cerca la pizza nella sua forma più elevata — rispettosa della tradizione, ma capace di guardare avanti con intelligenza e creatività.</p>
+
+        <div class="storia-stats">
+          <div class="stat">
+            <span class="stat-num">72h</span>
+            <span class="stat-label">Maturazione Impasto</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">485°</span>
+            <span class="stat-label">Temperatura Forno</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">100%</span>
+            <span class="stat-label">Ingredienti Italiani</span>
+          </div>
+        </div>
+
+        <a href="#contatti" class="btn btn-gold" onclick="event.preventDefault();document.getElementById('contatti').scrollIntoView({behavior:'smooth'})">
+          Prenota la tua Esperienza
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!--  GALLERIA -->
+  <section class="section galleria-section" id="galleria">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">La Nostra Galleria</span>
+        <h2 class="section-title">Un Viaggio Visivo</h2>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item reveal large">
+          <img src="https://images.unsplash.com/photo-1579751626657-72bc17010498?w=900&q=85&fit=crop" alt="Pizza in forno" />
+          <div class="gallery-overlay"><span>Il Forno</span></div>
+        </div>
+        <div class="gallery-item reveal">
+          <img src="https://images.unsplash.com/photo-1541745537411-b8046dc6d66c?w=600&q=80&fit=crop" alt="Dettaglio impasto" />
+          <div class="gallery-overlay"><span>L'Impasto</span></div>
+        </div>
+        <div class="gallery-item reveal">
+          <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&q=80&fit=crop" alt="Sala del ristorante" />
+          <div class="gallery-overlay"><span>La Sala</span></div>
+        </div>
+        <div class="gallery-item reveal">
+          <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?w=600&q=80&fit=crop" alt="Ingredienti freschi" />
+          <div class="gallery-overlay"><span>Gli Ingredienti</span></div>
+        </div>
+        <div class="gallery-item reveal tall">
+          <img src="https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?w=600&q=85&fit=crop" alt="Pizza gourmet servita" />
+          <div class="gallery-overlay"><span>Il Piatto</span></div>
+        </div>
+        <div class="gallery-item reveal">
+          <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=600&q=80&fit=crop" alt="Cocktail abbinamento" />
+          <div class="gallery-overlay"><span>I Drink</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECENSIONI-->
+  <section class="section recensioni-section" id="recensioni">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Cosa Dicono di Noi</span>
+        <h2 class="section-title">Le Recensioni</h2>
+      </div>
+
+      <div class="slider-wrapper reveal">
+        <div class="slider" id="slider">
+
+          <div class="slide">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">"Un'esperienza che va ben oltre la pizza. Ogni boccone racconta una storia — quella di una famiglia che ha trasformato la tradizione in arte. La Tartufata Nera è semplicemente divina."</p>
+            <div class="reviewer">
+              <img src="https://i.pravatar.cc/80?img=47" alt="Sofia Ricci" />
+              <div>
+                <strong>Sofia Ricci</strong>
+                <span>Milano — Critica gastronomica</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">"Ho girato il mondo per pizzerie stellate, ma La Fornace Nera ha qualcosa di unico: l'autenticità che non si impara nelle scuole di cucina. Si respira nei muri, nell'impasto, nello sguardo dello chef."</p>
+            <div class="reviewer">
+              <img src="https://i.pravatar.cc/80?img=12" alt="Marco Dellafiore" />
+              <div>
+                <strong>Marco Dellafiore</strong>
+                <span>Roma — Food Blogger</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">"Ambiente raffinato, servizio impeccabile e una carta dei vini curata che valorizza perfettamente le pizze. Raramente un locale riesce a essere così autentico e contemporaneo allo stesso tempo."</p>
+            <div class="reviewer">
+              <img src="https://i.pravatar.cc/80?img=25" alt="Elena Marchetti" />
+              <div>
+                <strong>Elena Marchetti</strong>
+                <span>Napoli — Sommelier</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">"La Black Edition con astice è la pizza più memorabile che abbia mai mangiato. Il coraggio di innovare rispettando la tradizione è raro. Complimenti a tutto il team per l'eccezionale lavoro."</p>
+            <div class="reviewer">
+              <img src="https://i.pravatar.cc/80?img=33" alt="Luca Ferretti" />
+              <div>
+                <strong>Luca Ferretti</strong>
+                <span>Torino — Chef stellato</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="slider-controls">
+          <button class="slider-btn" id="sliderPrev" aria-label="Precedente">←</button>
+          <div class="slider-dots" id="sliderDots"></div>
+          <button class="slider-btn" id="sliderNext" aria-label="Successivo">→</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--  CONTATTI -->
+  <section class="section contatti-section" id="contatti">
+    <div class="container contatti-grid">
+
+      <div class="contatti-info reveal">
+        <span class="section-label">Dove Siamo</span>
+        <h2 class="section-title">Vieni a Trovarci</h2>
+
+        <ul class="info-list">
+          <li>
+            <span class="info-icon">📍</span>
+            <div>
+              <strong>Indirizzo</strong>
+              <p>xxxxxxxxxx <br /> Napoli (NA)</p>
+            </div>
+          </li>
+          <li>
+            <span class="info-icon">📞</span>
+            <div>
+              <strong>Telefono</strong>
+              <p><a href="tel:+39123456789">+39 123 456 789</a></p>
+            </div>
+          </li>
+          <li>
+            <span class="info-icon">✉️</span>
+            <div>
+              <strong>Email</strong>
+              <p><a href="mailto:info@lafornacenera.it">info@lafornacenera.it</a></p>
+            </div>
+          </li>
+          <li>
+            <span class="info-icon">🕐</span>
+            <div>
+              <strong>Orari</strong>
+              <p>Mar–Ven: 12:30–14:30 / 19:00–23:30<br />Sab–Dom: 12:00–15:00 / 18:30–00:00<br />Lunedì: Chiuso</p>
+            </div>
+          </li>
+        </ul>
+
+        <div class="social-links">
+          <a href="#" class="social-btn">Instagram</a>
+          <a href="#" class="social-btn">Facebook</a>
+          <a href="#" class="social-btn">TripAdvisor</a>
+        </div>
+      </div>
+
+      <div class="contatti-form-wrap reveal">
+        <h3>Prenota il tuo Tavolo</h3>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="nome">Nome e Cognome</label>
+            <input type="text" id="nome" placeholder="Mario Rossi" />
+          </div>
+          <div class="form-group">
+            <label for="tel">Telefono</label>
+            <input type="tel" id="tel" placeholder="+39 333 000 0000" />
+          </div>
+          <div class="form-group">
+            <label for="data">Data</label>
+            <input type="date" id="data" />
+          </div>
+          <div class="form-group">
+            <label for="ospiti">Numero Ospiti</label>
+            <select id="ospiti">
+              <option>1 persona</option>
+              <option>2 persone</option>
+              <option>3 persone</option>
+              <option>4 persone</option>
+              <option>5–8 persone</option>
+              <option>Gruppo (9+)</option>
+            </select>
+          </div>
+          <div class="form-group full">
+            <label for="note">Note Speciali</label>
+            <textarea id="note" rows="3" placeholder="Allergie, occasioni speciali, preferenze..."></textarea>
+          </div>
+          <div class="form-group full">
+            <button class="btn btn-gold w-full" id="bookingBtn">Conferma Prenotazione</button>
+          </div>
+        </div>
+        <div class="booking-success" id="bookingSuccess">
+          ✦ Prenotazione ricevuta! Vi contatteremo entro 2 ore per conferma.
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Mappa placeholder -->
+    <div class="map-wrapper reveal">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3020.9!2d14.2559!3d40.8518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133b0843de0e2e1b%3A0x8f01e95d7ad0fa4a!2sVia+dei+Tribunali%2C+Napoli+NA!5e0!3m2!1sit!2sit!4v1"
+        width="100%" height="380" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade" title="Posizione La Fornace Nera">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <span class="logo-ornament">✦</span>
+        La Fornace Nera
+        <span class="logo-ornament">✦</span>
+        <p>L'arte della pizza dal 1987</p>
+      </div>
+
+      <nav class="footer-nav">
+        <a href="#menu">Menu</a>
+        <a href="#storia">Chi Siamo</a>
+        <a href="#galleria">Galleria</a>
+        <a href="#recensioni">Recensioni</a>
+        <a href="#contatti">Contatti</a>
+      </nav>
+
+      <p class="footer-copy">© 2024 La Fornace Nera ·  Napoli · </p>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Torna in cima">↑</button>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">✕</button>
+    <img src="" alt="" id="lightboxImg" />
+  </div>
+
+  <script src="ristorante.js"></script>
+</body>
+</html>
+
+
